@@ -50,6 +50,12 @@ class LinesCalcTest {
         }
 
         @Test
+        @DisplayName("one line")
+        void testOneLine() {
+            assertEquals(1,LinesCalc.calculateCodeLines("str"),"Should return right amount of strings");
+        }
+
+        @Test
         @DisplayName("only enters")
         void testEnters() {
             assertEquals(0,LinesCalc.calculateCodeLines("\n\n\n\r\n\r\n"),"Should return right amount of strings");
